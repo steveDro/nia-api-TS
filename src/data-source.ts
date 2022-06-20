@@ -1,6 +1,3 @@
-import "reflect-metadata";
-import { config } from "config";
-import { DataSource } from "typeorm";
 import { CustomerTransactions } from "./entity/CustomerTransactions";
 import { Binaries } from "./entity/Binaries";
 import { BiometricFeeds } from "./entity/BiometricFeeds";
@@ -10,16 +7,18 @@ import { Contacts } from "./entity/Contacts";
 import { DigitalAddress } from "./entity/DigitalAddress";
 import { Addresses } from "./entity/Addresses";
 import { Customers } from "./entity/Customers";
+import "reflect-metadata";
+import { DataSource } from "typeorm";
 
 export const AppDataSource = new DataSource({
-  type: config.get("type"),
-  host: config.get("host"),
-  port: config.get("port"),
-  username: config.get("username"),
-  password: config.get("password"),
-  database: config.get("db"),
+  type: "postgres",
+  host: "localhost",
+  port: 5432,
+  username: "postgres",
+  password: "pass123",
+  database: "nia-api-db",
   synchronize: true,
-  logging: true,
+  logging: false,
   entities: [
     Customers,
     Addresses,
