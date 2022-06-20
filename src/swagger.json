@@ -1,0 +1,117 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "NIA API",
+        "description": "Integration with NIA devices"
+       
+    },
+    "host": "localhost:5000/api/callback/verification",
+    "basePath": "",
+    "tags": [
+       {
+            "name": "Customers", 
+            "description": "API for customers in the system"
+    
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "consumes":[
+        "application/json"
+    ],
+    "produces":[
+        "application/json"
+    ],
+    "paths": {
+        "/":{
+            "get": {
+                "tags": ["Customers"],
+                "summary": "Get all customers.",
+                "responses": {
+                    "200":{
+                        "description": "Ok",
+                        "schema":{
+                            "$ref": "#definitions/Customers"
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": ["Customers"],
+                "summary": "Create new customer.",
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Customer to be created.",
+                        "schema": {
+                            "$ref": "#definitions/Customers"
+                        }
+                    }
+                ],
+                "produces": ["application/json"],
+                "responses": {
+                    "200":{
+                        "description": "Ok",
+                        "schema":{
+                            "$ref": "#definitions/Customers"
+                        }
+                    },
+                    "400":{
+                        "description": "Failed. Bad request."
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Customers": {
+            "type": "object",
+            "properties": {
+                "nationalId": {"type": "string"},
+                "cardId": {"type": "string"},
+                "cardValidFrom": {"type": "date"},
+                "cardValidTo": {"type" :"date"},
+                "forenames": {
+                    "type": "string"
+                },
+                "surname": {
+                    "type": "string"
+                },
+                "nationality": {"type": "string"},
+                "birthDate": {"type": "date"},
+                "birthCountry": {"type": "string"},
+                "birthDistrict": {"type": "string"},
+                "birthRegion": {"type": "string"},
+                "birthTown": {"type": "string"},
+                "prevName": {"type": "string"},
+                "gender": {"type": "string"},
+                "addresses": {"type":"array", "properties": {
+                    "type": {"type": "string"},
+                    "community": {"type": "string"},
+                    "postalCode": {"type": "string"},
+                    "region": {"type": "string"},
+                    "addressDigital": {"type": "string"},
+                    "DigitalAddress":{}
+                        
+                    }
+                },
+                "contacts": {"type":"object", "properties": {
+
+                }},
+                "occupations": {"type":"object", "properties": {
+
+                }},
+                "biometricFeed": {"type":"object", "properties": {
+
+                }},
+                "binaries": {"type":"object", "properties": {
+
+                }}
+            }
+        }
+    }
+    
+}
