@@ -18,6 +18,12 @@ export class Customers extends Dates {
   @PrimaryGeneratedColumn()
   id: number;
 
+  @Column({ type: "character varying" })
+  transactionGuid: string;
+
+  @Column()
+  shortGuid: string;
+
   @Column()
   nationalId: string;
 

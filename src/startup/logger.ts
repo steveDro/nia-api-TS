@@ -1,16 +1,16 @@
-import winston from "winston";
+import { createLogger, format, transports } from "winston";
 
-export const logger = winston.createLogger({
+export const logger = createLogger({
   level: "info",
-  format: winston.format.json(),
+  format: format.combine(format.json(), format.timestamp()),
   transports: [
-    new winston.transports.File({ filename: "error-info.log", level: "error" }),
-    new winston.transports.File({ filename: "error-info.log", level: "info" }),
+    new transports.File({ filename: "error-info.log", level: "error" }),
+    new transports.File({ filename: "error-info.log", level: "info" }),
   ],
   exceptionHandlers: [
-    new winston.transports.File({ filename: "exceptions-rejections.log" }),
+    new transports.File({ filename: "exceptions-rejections.log" }),
   ],
   rejectionHandlers: [
-    new winston.transports.File({ filename: "exceptions-rejections.log" }),
+    new transports.File({ filename: "exceptions-rejections.log" }),
   ],
 });

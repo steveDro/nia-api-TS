@@ -5,6 +5,8 @@ import { Contacts } from "./../entity/Contacts";
 import { Addresses } from "../entity/Addresses";
 
 export class CreateCustomerDto {
+  transactionGuid: string;
+  shortGuid: string;
   nationalId: string;
   cardId: string;
   cardValidFrom: Date;

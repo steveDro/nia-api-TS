@@ -1,11 +1,14 @@
 {"level":"info","message":"listening on port 5000"}
 {"level":"info","message":"connected..."}
 {"level":"info","message":"listening on port 5000"}
-{"level":"info","message":"connected..."}
+{"code":"23502","column":"transactionGuid","driverError":{"code":"23502","column":"transactionGuid","file":"tablecmds.c","length":168,"line":"5448","name":"error","routine":"ATRewriteTable","schema":"public","severity":"ERROR","table":"customers"},"file":"tablecmds.c","length":168,"level":"error","line":"5448","query":"ALTER TABLE \"customers\" ADD \"transactionGuid\" character varying(300) NOT NULL","routine":"ATRewriteTable","schema":"public","severity":"ERROR","table":"customers"}
+{"code":"23502","column":"transactionGuid","driverError":{"code":"23502","column":"transactionGuid","file":"tablecmds.c","length":168,"line":"5448","name":"error","routine":"ATRewriteTable","schema":"public","severity":"ERROR","table":"customers"},"file":"tablecmds.c","length":168,"level":"error","line":"5448","query":"ALTER TABLE \"customers\" ADD \"transactionGuid\" character varying(300) NOT NULL","routine":"ATRewriteTable","schema":"public","severity":"ERROR","table":"customers"}
 {"level":"info","message":"listening on port 5000"}
-{"level":"info","message":"connected..."}
+{"code":"23502","column":"transactionGuid","driverError":{"code":"23502","column":"transactionGuid","file":"tablecmds.c","length":168,"line":"5448","name":"error","routine":"ATRewriteTable","schema":"public","severity":"ERROR","table":"customers"},"file":"tablecmds.c","length":168,"level":"error","line":"5448","query":"ALTER TABLE \"customers\" ADD \"transactionGuid\" text NOT NULL","routine":"ATRewriteTable","schema":"public","severity":"ERROR","table":"customers"}
+{"code":"23502","column":"transactionGuid","driverError":{"code":"23502","column":"transactionGuid","file":"tablecmds.c","length":168,"line":"5448","name":"error","routine":"ATRewriteTable","schema":"public","severity":"ERROR","table":"customers"},"file":"tablecmds.c","length":168,"level":"error","line":"5448","query":"ALTER TABLE \"customers\" ADD \"transactionGuid\" text NOT NULL","routine":"ATRewriteTable","schema":"public","severity":"ERROR","table":"customers"}
 {"level":"info","message":"listening on port 5000"}
-{"level":"info","message":"connected..."}
+{"code":"23502","column":"transactionGuid","driverError":{"code":"23502","column":"transactionGuid","file":"tablecmds.c","length":168,"line":"5448","name":"error","routine":"ATRewriteTable","schema":"public","severity":"ERROR","table":"customers"},"file":"tablecmds.c","length":168,"level":"error","line":"5448","query":"ALTER TABLE \"customers\" ADD \"transactionGuid\" text NOT NULL","routine":"ATRewriteTable","schema":"public","severity":"ERROR","table":"customers"}
+{"code":"23502","column":"transactionGuid","driverError":{"code":"23502","column":"transactionGuid","file":"tablecmds.c","length":168,"line":"5448","name":"error","routine":"ATRewriteTable","schema":"public","severity":"ERROR","table":"customers"},"file":"tablecmds.c","length":168,"level":"error","line":"5448","query":"ALTER TABLE \"customers\" ADD \"transactionGuid\" text NOT NULL","routine":"ATRewriteTable","schema":"public","severity":"ERROR","table":"customers"}
 {"level":"info","message":"listening on port 5000"}
 {"level":"info","message":"connected..."}
 {"level":"info","message":"listening on port 5000"}

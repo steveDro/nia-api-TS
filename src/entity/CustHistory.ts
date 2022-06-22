@@ -9,15 +9,21 @@ import {
 } from "typeorm";
 
 @Entity()
-export class CustomerTransactions extends BaseEntity {
+export class CustHistory extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  nationalId: string;
+  customerId: number;
+
+  @Column({ type: "character varying" })
+  transactionGuid: string;
 
   @Column()
-  customerId: number;
+  shortGuid: string;
+
+  @Column()
+  nationalId: string;
 
   @Column()
   fullName: string;

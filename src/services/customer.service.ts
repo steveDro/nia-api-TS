@@ -1,4 +1,4 @@
-import { CustomerTransactions } from "./../entity/CustomerTransactions";
+import { CustHistory } from "../entity/CustHistory";
 import { BiometricFeeds } from "./../entity/BiometricFeeds";
 import { ContactPhones } from "./../entity/ContactPhones";
 import { DigitalAddress } from "./../entity/DigitalAddress";
@@ -68,7 +68,7 @@ export class CustomerService {
 
   async createCustomer(
     createCustomerDto: CreateCustomerDto
-  ): Promise<Customers | CustomerTransactions> {
+  ): Promise<Customers | CustHistory> {
     let customer = Customers.create({
       ...createCustomerDto,
       contacts: createCustomerDto.contact,
@@ -77,7 +77,7 @@ export class CustomerService {
     let customerExist = await this.getCustomerById(customer.nationalId);
 
     if (customerExist) {
-      return CustomerTransactions.create({
+      return CustHistory.create({
         customerId: customerExist.id,
         nationalId: customerExist.nationalId,
         fullName: customerExist.forenames + " " + customerExist.surname,

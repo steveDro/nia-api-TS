@@ -17,7 +17,7 @@ export class Contacts extends Dates {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
+  @Column({ nullable: true })
   email: string;
 
   @OneToOne(() => Customers, (customer) => customer.contacts)

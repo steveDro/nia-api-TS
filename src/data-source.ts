@@ -1,4 +1,4 @@
-import { CustomerTransactions } from "./entity/CustomerTransactions";
+import { CustHistory } from "./entity/CustHistory";
 import { Binaries } from "./entity/Binaries";
 import { BiometricFeeds } from "./entity/BiometricFeeds";
 import { ContactPhones } from "./entity/ContactPhones";
@@ -28,7 +28,7 @@ export const AppDataSource = new DataSource({
     ContactPhones,
     BiometricFeeds,
     Binaries,
-    CustomerTransactions,
+    CustHistory,
   ],
   migrations: ["build/src/migrations/**/*.{ts,js}"],
   subscribers: [],
