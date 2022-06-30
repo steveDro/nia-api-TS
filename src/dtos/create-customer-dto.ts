@@ -15,6 +15,10 @@ export class CreateCustomerDto {
   forenames: string;
   nationality: string;
   birthDate: Date;
+  userId: string;
+  userBranch: string;
+  requestTimestamp: string;
+  responseTimestamp: string;
   addresses: Addresses[];
   contact: Contacts;
   occupations: Occupations[];

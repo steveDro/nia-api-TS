@@ -31,6 +31,15 @@ export class CustHistory extends BaseEntity {
   @CreateDateColumn()
   dateVisited: Date;
 
-  //   @ManyToOne(() => Customers, (customer) => customer.customerTrans)
-  //   customer: Customers;
+  @Column()
+  userId: string;
+
+  @Column()
+  userBranch: string;
+
+  @Column()
+  requestTimestamp: string;
+
+  @Column()
+  responseTimestamp: string;
 }

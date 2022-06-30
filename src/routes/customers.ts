@@ -13,11 +13,23 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
   let creatCustomerDto = new CreateCustomerDto();
 
-  const { transactionGuid, shortGuid, person } = req.body.data;
+  const {
+    transactionGuid,
+    shortGuid,
+    userId,
+    center,
+    requestTimestamp,
+    responseTimestamp,
+    person,
+  } = req.body.data;
 
   creatCustomerDto = person;
   creatCustomerDto.transactionGuid = transactionGuid;
   creatCustomerDto.shortGuid = shortGuid;
+  creatCustomerDto.userId = userId;
+  creatCustomerDto.userBranch = center;
+  creatCustomerDto.requestTimestamp = requestTimestamp;
+  creatCustomerDto.responseTimestamp = responseTimestamp;
 
   const customer = await customerService.createCustomer(creatCustomerDto);
   res.send(customer);

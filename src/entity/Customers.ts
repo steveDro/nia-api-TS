@@ -48,6 +48,18 @@ export class Customers extends Dates {
   @Column()
   birthDate: Date;
 
+  @Column()
+  userId: string;
+
+  @Column()
+  userBranch: string;
+
+  @Column()
+  requestTimestamp: string;
+
+  @Column()
+  responseTimestamp: string;
+
   @Column({ nullable: true })
   birthCountry: string;
 

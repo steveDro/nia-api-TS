@@ -80,6 +80,12 @@ export class CustomerService {
       return CustHistory.create({
         customerId: customerExist.id,
         nationalId: customerExist.nationalId,
+        transactionGuid: customerExist.transactionGuid,
+        shortGuid: customerExist.shortGuid,
+        userId: customerExist.userId,
+        userBranch: customerExist.userBranch,
+        requestTimestamp: customerExist.requestTimestamp,
+        responseTimestamp: customerExist.responseTimestamp,
         fullName: customerExist.forenames + " " + customerExist.surname,
       }).save();
     }
